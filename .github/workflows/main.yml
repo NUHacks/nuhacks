@@ -34,7 +34,7 @@ jobs:
     - name: Install node.js (and yarn, I think)
       uses: actions/setup-node@v2-beta
       with:
-        node-version: '12.x'
+        node-version: '18.x'
     # https://github.com/actions/cache/blob/master/examples.md#node---yarn
     - name: Find out name of yarn cache path
       id: yarn-cache-dir-path
@@ -77,5 +77,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: master
           publish_dir: public
-          cname: nuhacks.io
           enable_jekyll: false
